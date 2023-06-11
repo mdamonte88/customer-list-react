@@ -9,7 +9,7 @@ function SearchCustomer() {
     <div className='layout-row align-items-center justify-content-center mt-30'>
         <input className='large mx-20 w-20' data-testid='search-input' value='Search' placeholder='Enter search term (Eg: Phil)' />
     </div>
-    <CustomerList />
+    <CustomerList customers={List} />
     </>
   )
 }

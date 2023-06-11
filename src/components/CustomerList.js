@@ -16,13 +16,16 @@ function CustomerList({customers}) {
                     </tr>
                     </thead>
                     <tbody data-testid='searched-customers'>
-                            <tr>
-                                <td>Jeremy Clarke</td>
-                                <td>21</td>
-                                <td>Seattle</td>
-                                <td>Male</td>
-                                <td>$120,000</td>
-                            </tr>
+                            {customers && customers.map((customer, i) => (
+                              <tr> 
+                                  <td> {customer.name} </td> 
+                                  <td> {customer.age} </td> 
+                                  <td> {customer.location} </td>
+                                  <td> {customer.gender} </td> 
+                                  <td> {customer.income} </td>  
+                              </tr>
+                            )
+                            )}
                     </tbody>
                 </table>
             </div>
